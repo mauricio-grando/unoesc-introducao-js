@@ -1,0 +1,45 @@
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Exercicio 6</title>
+		<script src="exercicio6.js" type="text/javascript"></script>
+	</head>
+
+	<body>
+		<b>Enviar CEP para consulta:</b> <br/><br/>
+
+		<form id="searchAddressOrCep" method="get">
+			<input type="radio" name="searchBy" value="cep" checked onchange="hiddenFields('cepData', 'cep');">CEP
+  			<input type="radio" name="searchBy" value="address" onchange="hiddenFields('addressData', 'address');">Endereço
+			<input type="radio" name="searchBy" value="interval" onchange="hiddenFields('intervalData', 'interval');">Intervalo
+			<br/><br/>
+			
+			<input type="hidden" value="cep" id="op"/>
+			
+			<div id="cepData">
+				CEP: <input type="text" id="cepIpt" value="" />
+			</div>
+
+			<div id="addressData" style="display: none;">
+				Rua: <input type="text" id="street" value=""/> <br/><br/>
+				Cidade: <input type="text" id="city" value="" /><br/><br/>
+				Estado: <input type="text" id="state" value="" maxlength="2" />
+			</div>
+			
+			<div id="intervalData" style="display: none;">
+				CEP Inicial: <input type="text" id="cepIni" value=""/><br/><br/>
+				CEP Final: <input type="text" id="cepFinal" value=""/>
+			</div>
+
+			<br/><br/>
+			<button id="submitCep" type="button" onclick="submitCEP();">ENVIAR CEP</button>	
+		</form>
+		
+		<div id="addressResult"></div>
+		
+		<div id="addressIntervalResult1"></div>
+		<div id="addressIntervalResult2"></div>
+		
+
+	</body>	
+</html>

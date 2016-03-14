@@ -1,0 +1,23 @@
+1. Vantagens:
+
+- Fornece uma boa interação com o usuário, sendo possível disparar modais de interatividade.
+- Por ser interpretado do lado cliente, seu carregamento é mais rápido, tornando o load da página menos oneroso e com menos demanda ao servidor do site.
+- Podem ser usados mecanismos de cache, exemplo cache do Apache, para otimizar o carregamento.
+- É uma linguagem de fácil entendimento e com bastante material disponível para aprendizagem (não se encaixa na questão, mas vale ressaltar).
+- Também é possível realizar detecção de navegador. Por experiência de trabalho, já vi clientes ecommerce criarem promoções baseadas em qual navegador partiu a requisição.
+
+Desvantagens:
+
+- Como existem vários padrões específicos de cada browser, algumas funções podem precisar de ajustes específicos quando interpretados por diferentes navegadores.
+- É possível manipular (exemplo: inspecionar elemento do Chrome) e alterar variáveis de funções, ou incluir trechos de código para gerar problemas. Por isso, as validações devem também ser feitas no backend.
+- É necessária uma atenção redobrada com os dados a serem dispostos em arquivos javascript, baseado no item acima. Como exemplo, não é boa prática expor dados de usuários em funções javascript, pois qualquer pessoa poderia atacar a execução de capturar os dados.
+
+2. 1. onclick -> elemento recebe um clique do mouse
+   2. onkeypress -> uma tecla é pressionada e solta
+   3. onblur -> elemento HTML perde o foco
+   4. onfocus -> elemento HTML recebe o foco
+   5. onsubmit -> formulário é submetido
+   6. onload -> a página é carregada
+   7. onchange -> elemento HTML tem seu valor alterado
+   8. ommousemove -> mouse é movimentado sobre o elemento HTML
+   
